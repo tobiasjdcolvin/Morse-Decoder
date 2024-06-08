@@ -29,18 +29,25 @@ function decodeClicked() {
     // adds a new letter character " " so as to print the current character.
     codeViewBox.textContent += " ";
     inputText = codeViewBox.textContent;
+    let currNode = bstTree.root;
 
     for (let i = 0; i < inputText.length; i++) {
         let curr = inputText.charAt(i);
-        if (curr == ".") {
-            outputText += "right\n";
-        } else if (curr == "-") {
-            outputText += "left\n";
-        } else if (curr == " ") {
-            outputText += "re-root, PRINT LETTER\n";
-        } else if (curr == "\t") {
-            outputText += "re-root, PRINT LETTER + SPACE\n";
+        if (currNode != null) {
+            if (curr == ".") {
+                currNode = currNode.left;
+            } else if (curr == "-") {
+                currNode = currNode.right;
+            } else if (curr == " ") {
+                outputText += currNode.data;
+                currNode = bstTree.root;
+            } else if (curr == "\t") {
+                outputText += currNode.data;
+                outputText += " ";
+                currNode = bstTree.root;
+            }
         }
+
     }
 
     resultViewBox.textContent = outputText;
