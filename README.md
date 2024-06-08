@@ -1,2 +1,3 @@
-# Morse-Decoder
-(In progress) A Morse Code decoder made with JavaScript, HTML, CSS.
+# Morse Decoder
+A Morse Code decoder implemented with a binary tree.
+[https://tobiasjdcolvin.github.io/Morse-Decoder/](https://tobiasjdcolvin.github.io/Morse-Decoder/)
