@@ -26,10 +26,10 @@ function newWordClicked() {
 }
 
 function decodeClicked() {
-    // adds a new letter character " " so as to print the current character.
-    codeViewBox.textContent += " ";
-    inputText = codeViewBox.textContent;
-    let currNode = bstTree.root;
+    resultViewBox.textContent = "";
+    outputText = "";
+    inputText = codeViewBox.textContent.trim() + " ";
+    let currNode = morseTree.root;
 
     for (let i = 0; i < inputText.length; i++) {
         let curr = inputText.charAt(i);
@@ -39,13 +39,20 @@ function decodeClicked() {
             } else if (curr == "-") {
                 currNode = currNode.right;
             } else if (curr == " ") {
-                outputText += currNode.data;
-                currNode = bstTree.root;
+                if (currNode.data != "root") {
+                    outputText += currNode.data;
+                }
+                currNode = morseTree.root;
             } else if (curr == "\t") {
-                outputText += currNode.data;
-                outputText += " ";
-                currNode = bstTree.root;
+                if (currNode.data != "root") {
+                    outputText += currNode.data;
+                    outputText += " ";
+                }
+                currNode = morseTree.root;
             }
+        } else {
+            outputText += "?";
+            currNode = morseTree.root;
         }
 
     }

@@ -70,4 +70,4 @@ let root = new TreeNode("root");
 root.left = e;
 root.right = t;
 
-let bstTree = new Tree(root);
+let morseTree = new Tree(root);
