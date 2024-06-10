@@ -43,6 +43,10 @@ button {
     transition-duration: 100ms;
 }
 
+button:focus {
+    background-color: burlywood;
+}
+
 button:hover {
     background-color: rgb(185, 154, 113);
 }
