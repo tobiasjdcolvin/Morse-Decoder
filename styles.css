@@ -32,6 +32,12 @@ body {
 
 }
 
+button,
+#codeViewBox,
+#resultViewBox {
+    border-radius: 5px;
+}
+
 button {
     min-width: 135px;
     max-width: 135px;
