@@ -41,6 +41,7 @@ button {
     color: black;
     font-size: 1.25em;
     transition-duration: 100ms;
+    box-shadow: 0.5px 1px black;
 }
 
 /* for mouse devices */
@@ -50,4 +51,8 @@ button {
     button:hover {
         background-color: rgb(185, 154, 113);
     }
+}
+
+button:active {
+    background-color: rgb(185, 154, 113);
 }
