@@ -51,8 +51,13 @@ function decodeClicked() {
                 currNode = morseTree.root;
             }
         } else {
-            outputText += "?";
-            currNode = morseTree.root;
+            if (curr == "\t") {
+                outputText += "? ";
+                currNode = morseTree.root;
+            } else if (curr == " ") {
+                outputText += "?";
+                currNode = morseTree.root;
+            }
         }
 
     }
